@@ -167,9 +167,7 @@ export default {
     updateNavbar() {
       if (window.innerWidth >= 960) {
         this.extensHeight = "48px";
-        console.log("desk");
       } else {
-        console.log("mobile");
         this.extensHeight = 0;
       }
     }

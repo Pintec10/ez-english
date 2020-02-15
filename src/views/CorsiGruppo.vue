@@ -1,5 +1,5 @@
 <template>
-  <div>Footer</div>
+  <v-container>corsi di gruppo</v-container>
 </template>
 
 <script>

@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 .title-back {
   background-color: rgba(0, 0, 0, 0.3);
 }

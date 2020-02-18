@@ -60,7 +60,7 @@
       </template>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute height="100vh" temporary>
+    <v-navigation-drawer class="d-md-none" v-model="drawer" absolute height="100vh" temporary>
       <v-list nav dense>
         <v-list-item class="d-flex justify-center">
           <v-btn icon @click="drawer = false">
@@ -92,7 +92,7 @@
             <v-list-item-title>Contatti</v-list-item-title>
           </v-list-item>
 
-          <v-menu open-on-hover offset-x>
+          <v-menu open-on-click offset-x>
             <template v-slot:activator="{ on }">
               <v-list-item v-on="on" active-class="red darken-2 white--text">
                 <v-list-item-icon>

@@ -2,7 +2,9 @@
   <v-app>
     <HeaderNav />
     <v-content>
-      <router-view />
+      <div class="py-0">
+        <router-view />
+      </div>
     </v-content>
 
     <v-footer

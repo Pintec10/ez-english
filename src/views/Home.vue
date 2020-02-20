@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <div class="vert-spacer"></div>
     <v-row>
       <v-col class="col-12 col-sm-6 col-md-4">
         <v-card to="/corsi-individuali">
@@ -12,7 +13,7 @@
       </v-col>
       <v-col class="col-12 col-sm-6 col-md-4">
         <v-card to="/corsi-gruppo">
-          <v-img class="white--text align-end" src="@/assets/corsi_individuali.jpg" height="200px">
+          <v-img class="white--text align-end" src="@/assets/group.jpg" height="200px">
             <div class="title-back">
               <v-card-title>Corsi di gruppo</v-card-title>
             </div>
@@ -42,5 +43,10 @@ export default {
 <style >
 .title-back {
   background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 960px) {
+  .vert-spacer {
+    height: 15vh;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <h1 class="text-center">Corsi di gruppo</h1>
+    <h2 class="text-center">Corsi di gruppo</h2>
     <v-card class="ma-3 pa-1 ma-md-10 pa-md-5">
       <v-img
         class="white--text align-end mb-1"

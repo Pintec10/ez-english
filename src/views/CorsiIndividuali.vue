@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <h1 class="text-center">Corsi individuali</h1>
+    <h2 class="text-center">Corsi individuali</h2>
     <v-row>
       <v-col class="col-12 col-md-4">
         <v-card class="pa-3" height="100%">

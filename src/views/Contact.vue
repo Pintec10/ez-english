@@ -24,17 +24,24 @@
     <v-row>
       <v-col class="col-12 col-md-6 text-center">
         <v-card class="pa-3">
-          <v-form v-model="valid">
-            <h2>Richiedi informazioni</h2>
-            <v-text-field v-model="nome" label="Nome" required :rules="nameRules"></v-text-field>
-            <v-text-field v-model="email" label="E-mail" required :rules="emailRules"></v-text-field>
-            <v-textarea
-              v-model="messaggio"
-              name="input-7-1"
-              label="Messaggio"
-              :rules="messageRules"
-            ></v-textarea>
-            <v-btn type="button" class="my-5">Invia</v-btn>
+          <v-form
+            v-model="valid"
+            method="post"
+            action="https://send.pageclip.co/BkgRu5V123sMDovgYm24ffR7mmyCKtxn/Emilio-info-form"
+            class="pageclip-form"
+          >
+            <!-- good action link for final build below. Above for testing -->
+            <!-- <v-form
+            v-model="valid"
+            method="post"
+            action="https://send.pageclip.co/BM0QmxMC7pHGQrRhKCZ4VwfTM85PuQQg/form-informazioni"
+            >-->
+            <h3>Richiedi informazioni</h3>
+            <v-text-field v-model="nome" name="name" label="Nome" required :rules="nameRules"></v-text-field>
+            <v-text-field v-model="email" name="email" label="E-mail" required :rules="emailRules"></v-text-field>
+            <v-textarea v-model="messaggio" name="message" label="Messaggio" :rules="messageRules"></v-textarea>
+            <v-alert dismissible v-if="alert.type != null" :type="alert.type">{{alert.message}}</v-alert>
+            <v-btn type="submit" class="my-5" :loading="loading" :disabled="!valid">Invia</v-btn>
           </v-form>
         </v-card>
       </v-col>
@@ -59,6 +66,11 @@
 export default {
   data() {
     return {
+      loading: false,
+      alert: {
+        type: null,
+        message: null
+      },
       valid: false,
       nome: "",
       email: "",
@@ -70,6 +82,29 @@ export default {
       ],
       messageRules: [v => !!v || "Descrivi le informazioni che ti servono"]
     };
+  },
+
+  mounted() {
+    var form = document.querySelector(".pageclip-form");
+    window.Pageclip.form(form, {
+      onSubmit: () => {
+        this.loading = true;
+      },
+      onResponse: (error, response) => {
+        this.loading = false;
+        if (response.data === "ok") {
+          this.alert.type = "success";
+          this.alert.message = "Grazie per il tuo messaggio!";
+        }
+        if (error) {
+          this.alert.type = "error";
+          this.alert.message =
+            "Il messaggio non è stato inviato correttamente, riprova più tardi o scrivi a emilio.zampier@gmail.com";
+        }
+        return false;
+      },
+      successTemplate: "<span>Thank you!</span>"
+    });
   }
 };
 </script>

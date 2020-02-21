@@ -11,29 +11,34 @@
             class="text-center pa-3"
           >Scarica qui sotto il file .pdf o .doc del test di autovalutazione per la lingua inglese e scopri qual è il tuo livello!</v-card-text>
           <div class="d-flex justify-center my-3">
-            <v-btn
-              color="red"
-              dark
-              class="mx-3"
-              x-large
-              fab
-              download
-              href="../assets/self-assessment.pdf"
-            >
-              <v-icon>mdi-file-pdf</v-icon>
-            </v-btn>
-
-            <v-btn
-              color="indigo"
-              dark
-              class="mx-3"
-              x-large
-              fab
-              download
-              href="../assets/self-assessment.doc"
-            >
-              <v-icon>mdi-file-document</v-icon>
-            </v-btn>
+            <div class="d-flex flex-column align-center">
+              <v-btn
+                color="red"
+                dark
+                class="mx-5 mb-2"
+                x-large
+                fab
+                download
+                href="../assets/self-assessment.pdf"
+              >
+                <v-icon>mdi-file-pdf</v-icon>
+              </v-btn>
+              <p>PDF</p>
+            </div>
+            <div class="d-flex flex-column align-center">
+              <v-btn
+                color="indigo"
+                dark
+                class="mx-3 mb-2"
+                x-large
+                fab
+                download
+                href="../assets/self-assessment.doc"
+              >
+                <v-icon>mdi-file-document</v-icon>
+              </v-btn>
+              <p>DOC</p>
+            </div>
           </div>
         </v-card>
       </v-col>

@@ -15,7 +15,7 @@
       </v-card>
     </v-footer>-->
 
-    <v-footer dark padless class="red">
+    <v-footer dark class="red">
       <v-spacer></v-spacer>
       <v-card flat tile class="red white--text text-center">
         <v-card-text

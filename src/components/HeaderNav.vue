@@ -18,8 +18,6 @@
       <template v-slot:extension>
         <div class="d-none d-md-block">
           <v-btn text tile active-class="white indigo--text text--darken-3" to="/">Home</v-btn>
-          <v-btn text tile active-class="white indigo--text text--darken-3" to="/about">Chi sono</v-btn>
-          <v-btn text tile active-class="white indigo--text text--darken-3" to="/contact">Contatti</v-btn>
 
           <v-menu open-on-hover offset-y>
             <template v-slot:activator="{ on }">
@@ -56,6 +54,9 @@
             active-class="white indigo--text text--darken-3"
             to="/valuta-inglese"
           >Valuta il tuo inglese</v-btn>
+
+          <v-btn text tile active-class="white indigo--text text--darken-3" to="/about">Chi sono</v-btn>
+          <v-btn text tile active-class="white indigo--text text--darken-3" to="/contact">Contatti</v-btn>
         </div>
       </template>
     </v-app-bar>

@@ -24,18 +24,18 @@
     <v-row>
       <v-col class="col-12 col-md-6 text-center">
         <v-card class="pa-3">
-          <v-form
+          <!-- <v-form
             v-model="valid"
             method="post"
             action="https://send.pageclip.co/BkgRu5V123sMDovgYm24ffR7mmyCKtxn/Emilio-info-form"
             class="pageclip-form"
-          >
-            <!-- good action link for final build below. Above for testing -->
-            <!-- <v-form
+          >-->
+          <!-- good action link for final build below. Above for testing -->
+          <v-form
             v-model="valid"
             method="post"
             action="https://send.pageclip.co/BM0QmxMC7pHGQrRhKCZ4VwfTM85PuQQg/form-informazioni"
-            >-->
+          >
             <h3>Richiedi informazioni</h3>
             <v-text-field v-model="nome" name="name" label="Nome" required :rules="nameRules"></v-text-field>
             <v-text-field v-model="email" name="email" label="E-mail" required :rules="emailRules"></v-text-field>

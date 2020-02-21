@@ -35,6 +35,7 @@
             v-model="valid"
             method="post"
             action="https://send.pageclip.co/BM0QmxMC7pHGQrRhKCZ4VwfTM85PuQQg/form-informazioni"
+            class="pageclip-form"
           >
             <h3>Richiedi informazioni</h3>
             <v-text-field v-model="nome" name="name" label="Nome" required :rules="nameRules"></v-text-field>

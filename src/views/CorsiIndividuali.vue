@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid>
-    <h2 class="text-center">Corsi individuali</h2>
-    <v-row>
+  <v-container fluid class="py-10">
+    <h1 class="text-center indigo--text text--darken-4">Corsi individuali</h1>
+    <v-row class="my-10">
       <v-col class="col-12 col-md-4">
-        <v-card class="pa-3" height="100%">
+        <v-card height="100%" color="red darken-4">
           <v-img
             class="white--text align-end mb-1"
             src="@/assets/preparazione_esami.jpg"
@@ -13,7 +13,7 @@
               <v-card-title class="card-title py-2">Corsi Standard</v-card-title>
             </div>
           </v-img>
-          <div class="overflow d-flex flex-column">
+          <div class="overflow d-flex flex-column white--text pa-2">
             <p>
               Il corso standard si avvale di un libro di testo di una autorevole casa editrice inglese
               (Oxford UP o Cambridge UP), e ha un programma didattico prefissato, che sviluppa tutti
@@ -35,14 +35,19 @@
             </div>
             <div class="flex-grow-1"></div>
 
-            <v-btn block @click="panel1 = !panel1" text class="body-1 text-none align-self-end">
+            <v-btn
+              block
+              @click="panel1 = !panel1"
+              text
+              class="body-1 text-none align-self-end white--text"
+            >
               <span v-if="panel1">
                 Chiudi
-                <v-icon class="ml-1">mdi-chevron-up</v-icon>
+                <v-icon class="ml-1 white--text">mdi-chevron-up</v-icon>
               </span>
               <span v-else>
                 Continua a leggere...
-                <v-icon class="ml-1">mdi-chevron-down</v-icon>
+                <v-icon class="ml-1 white--text">mdi-chevron-down</v-icon>
               </span>
             </v-btn>
           </div>
@@ -50,7 +55,7 @@
       </v-col>
 
       <v-col class="col-12 col-md-4">
-        <v-card class="pa-3" height="100%">
+        <v-card class="red darken-4" height="100%">
           <v-img
             class="white--text align-end mb-1"
             src="@/assets/preparazione_esami.jpg"
@@ -61,7 +66,7 @@
             </div>
           </v-img>
 
-          <div class="overflow">
+          <div class="overflow white--text pa-2">
             <p>
               Il corso Listening, Conversation & Grammar è rivolto ai livelli Pre-Intermediate (A2),
               Intermediate (B1) e Upper-Intermediate (B2), e si tiene esclusivamente in lingua inglese.
@@ -82,14 +87,14 @@
               <p>A richiesta, il docente può preparare lezioni di argomento tecnico, a seconda delle esigenze dello studente.</p>
               <p>Passare dal livello B1 al livello B2 richiede solitamente almeno 50-60h di corso. Per il passaggio da B2 a C1, ovvero per ottenere un autentico livello avanzato non solo a livello grammaticale, si calcolino almeno 90h.</p>
             </div>
-            <v-btn block @click="panel2 = !panel2" text class="body-1 text-none">
+            <v-btn block @click="panel2 = !panel2" text class="body-1 text-none white--text">
               <span v-if="panel2">
                 Chiudi
-                <v-icon class="ml-1">mdi-chevron-up</v-icon>
+                <v-icon class="ml-1 white--text">mdi-chevron-up</v-icon>
               </span>
               <span v-else>
                 Continua a leggere...
-                <v-icon class="ml-1">mdi-chevron-down</v-icon>
+                <v-icon class="ml-1 white--text">mdi-chevron-down</v-icon>
               </span>
             </v-btn>
           </div>
@@ -97,7 +102,7 @@
       </v-col>
 
       <v-col class="col-12 col-sm-6 col-md-4">
-        <v-card height="100%" class="pa-3">
+        <v-card height="100%" class="red darken-4">
           <v-img
             class="white--text align-end mb-1"
             src="@/assets/preparazione_esami.jpg"
@@ -107,7 +112,7 @@
               <v-card-title class="card-title py-2">Preparazione Esami e Certificazioni, Ripetizioni</v-card-title>
             </div>
           </v-img>
-          <div class="overflow">
+          <div class="overflow white--text pa-2">
             <p>Un tutor qualificato e con esperienza vi seguirà nella preparazione di esami universitari di qualsiasi tipo (lingua, letteratura, ecc.) ed esami Cambridge quali IELTS, KET, PET e FIRST.</p>
             <p>Per gli studenti delle scuole superiori, supporto scolastico durante l'anno e in estate per recupero debiti ed esami di maturità.</p>
           </div>
@@ -132,7 +137,7 @@ export default {
 <style >
 .overflow {
   overflow: auto;
-  height: 45vh;
+  height: 50vh;
 }
 
 .card-title {

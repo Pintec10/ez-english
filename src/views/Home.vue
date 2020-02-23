@@ -1,5 +1,9 @@
 <template>
-  <v-container>
+  <v-container fluid class="py-10">
+    <h1 class="text-center indigo--text text--darken-4">Emilio Zampieri English</h1>
+    <h2
+      class="text-center indigo--text text--darken-4"
+    >Corsi di inglese personalizzati a Piove di Sacco</h2>
     <div class="vert-spacer"></div>
     <v-row>
       <v-col class="col-12 col-sm-6 col-md-4">
@@ -46,7 +50,7 @@ export default {
 }
 @media only screen and (min-width: 960px) {
   .vert-spacer {
-    height: 15vh;
+    height: 10vh;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <h2 class="text-center">Contatti</h2>
+  <v-container fluid class="py-10">
+    <h1 class="text-center indigo--text text--darken-4">Contatti</h1>
     <v-row>
       <v-col class="col-12 col-md-4">
         <v-card class="text-center pa-3">

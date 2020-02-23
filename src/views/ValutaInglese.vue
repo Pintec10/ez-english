@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid>
-    <h1 class="text-center">Valuta il tuo inglese</h1>
+  <v-container fluid class="py-10">
+    <h1 class="text-center indigo--text text--darken-4">Valuta il tuo inglese</h1>
 
     <v-row>
       <v-spacer></v-spacer>

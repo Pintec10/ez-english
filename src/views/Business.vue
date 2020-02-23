@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid>
-    <h2 class="text-center">Corsi Business</h2>
+  <v-container fluid class="py-10">
+    <h1 class="text-center indigo--text text--darken-4">Corsi Business</h1>
 
     <v-row class="mt-6">
       <v-spacer></v-spacer>

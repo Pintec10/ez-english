@@ -1,11 +1,12 @@
 <template>
-  <v-container fluid class="py-10">
+  <v-container class="py-10">
     <h1 class="text-center indigo--text text--darken-4">Corsi di gruppo</h1>
-    <v-card class="ma-3 ma-md-10 red darken-4">
+    <v-card shaped class="ma-3 ma-md-12 red darken-4">
       <v-img
         class="white--text align-end mb-1"
-        src="@/assets/preparazione_esami.jpg"
-        height="200px"
+        src="../assets/corsi_gruppo_gruppo.jpg"
+        height="40vh"
+        position="center 15%"
       >
         <div class="title-back">
           <v-card-title class="card-title py-2">Offerta didattica con livello di partenza richiesto</v-card-title>

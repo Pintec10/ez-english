@@ -19,12 +19,18 @@
             @click="overlay = true"
           >Informativa sulla privacy e sull'uso dei cookie</v-card-text>
 
-          <v-overlay :value="overlay" opacity="0.8" class="text-left">
+          <v-overlay
+            id="privacy-overlay"
+            :value="overlay"
+            opacity="0.8"
+            class="text-center"
+            width="50vw"
+          >
             <v-btn icon @click="overlay = false">
               <v-icon>mdi-close</v-icon>
             </v-btn>
             <v-divider></v-divider>
-            <div class="privacy">
+            <div class="privacy text-left">
               <v-container>
                 <h3>INFORMATIVA SULLA PRIVACY E SULL'USO DEI COOKIE</h3>
                 <p>(ai sensi del Regolamento UE 2016/679 e, per quanto applicabile, ai sensi del Dlgs. 196/2003 ed ai sensi del Provvedimento in materia di cookie n. 229 dell’8 maggio 2014)</p>
@@ -86,6 +92,17 @@
         <v-spacer></v-spacer>
       </v-footer>
     </div>
+    <div class="text-center">
+      <v-bottom-sheet v-model="bottomSheet">
+        <v-sheet class="text-center">
+          <div
+            class="pa-3"
+          >Questo sito utilizza dei cookie per migliorare la tua esperienza di navigazione. Proseguendo nella navigazione accetti l'uso dei cookie secondo quanto espresso nell'informativa sull'uso dei cookie. Informativa</div>
+          <v-btn class="ma-3" color="primary" @click="overlay = true">Leggi informativa</v-btn>
+          <v-btn class="ma-3" color="success" @click="acceptCookies()">Accetta</v-btn>
+        </v-sheet>
+      </v-bottom-sheet>
+    </div>
   </v-app>
 </template>
 
@@ -100,8 +117,24 @@ export default {
   },
 
   data: () => ({
-    overlay: false
-  })
+    overlay: false,
+    bottomSheet: true
+  }),
+
+  methods: {
+    acceptCookies() {
+      localStorage.setItem("EZenglishCookies", "accepted");
+      this.overlay = false;
+      this.bottomSheet = false;
+    }
+  },
+
+  mounted() {
+    let cookiesAccepted = localStorage.getItem("EZenglishCookies");
+    if (cookiesAccepted === "accepted") {
+      this.bottomSheet = false;
+    }
+  }
 };
 </script>
 
@@ -122,5 +155,9 @@ export default {
 .privacy {
   max-height: 90vh;
   overflow: auto;
+}
+
+#privacy-overlay {
+  z-index: 210 !important;
 }
 </style>

@@ -9,15 +9,15 @@
       <v-spacer class="d-none d-md-inline-block" />
       <v-toolbar-title
         class="font-weight-bold indigo--text text--darken-4 d-none d-md-inline-block"
-      >
-        Emilio Zampieri English
-        <span
-          class="d-none d-md-inline"
-        >- Corsi di inglese personalizzati a Piove di Sacco</span>
-      </v-toolbar-title>
+      >Emilio Zampieri English</v-toolbar-title>
 
       <v-spacer />
 
+      <a class="external-link" href="https://www.linkedin.com/in/emilio-zampieri-722181112/">
+        <v-btn icon>
+          <v-icon large color="indigo darken-4">mdi-linkedin</v-icon>
+        </v-btn>
+      </a>
       <a class="external-link" href="https://www.facebook.com/corsiinglesepiovedisacco/">
         <v-btn icon>
           <v-icon large color="indigo darken-4">mdi-facebook</v-icon>
@@ -77,11 +77,6 @@
                   <v-icon>mdi-account-tie</v-icon>
                 </v-list-item-icon>
                 <v-list-item-title>Business</v-list-item-title>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-title>
-                  <v-spacer />
-                </v-list-item-title>
               </v-list-item>
             </v-list>
           </v-menu>

@@ -3,11 +3,12 @@
     <h1 class="text-center indigo--text text--darken-4">Corsi individuali</h1>
     <v-row class="my-10">
       <v-col class="col-12 col-md-4">
-        <v-card height="100%" color="red darken-4">
+        <v-card shaped height="100%" class="red darken-4 mx-md-1">
           <v-img
             class="white--text align-end mb-1"
-            src="@/assets/preparazione_esami.jpg"
-            height="150px"
+            src="../assets/corsi_standard_individuali.jpg"
+            height="200px"
+            position="center 15%"
           >
             <div class="title-back">
               <v-card-title class="card-title py-2">Corsi Standard</v-card-title>
@@ -55,11 +56,12 @@
       </v-col>
 
       <v-col class="col-12 col-md-4">
-        <v-card class="red darken-4" height="100%">
+        <v-card shaped class="red darken-4 mx-md-1" height="100%">
           <v-img
             class="white--text align-end mb-1"
-            src="@/assets/preparazione_esami.jpg"
-            height="150px"
+            src="../assets/listening_individuali.jpeg"
+            height="200px"
+            position="center 5%"
           >
             <div class="title-back">
               <v-card-title class="card-title py-2">Listening, Conversation & Grammar</v-card-title>
@@ -102,11 +104,12 @@
       </v-col>
 
       <v-col class="col-12 col-sm-6 col-md-4">
-        <v-card height="100%" class="red darken-4">
+        <v-card shaped height="100%" class="red darken-4 mx-md-1">
           <v-img
             class="white--text align-end mb-1"
-            src="@/assets/preparazione_esami.jpg"
-            height="150px"
+            src="../assets/preparazione_esami.jpg"
+            height="200px"
+            position="center 15%"
           >
             <div class="title-back">
               <v-card-title class="card-title py-2">Preparazione Esami e Certificazioni, Ripetizioni</v-card-title>

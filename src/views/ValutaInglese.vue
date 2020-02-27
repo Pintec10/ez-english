@@ -1,49 +1,51 @@
 <template>
-  <v-container fluid class="py-10">
-    <h1 class="text-center indigo--text text--darken-4">Valuta il tuo inglese</h1>
+  <v-container class="py-10">
+    <h2 class="text-center indigo--text text--darken-4">Valuta il tuo inglese</h2>
 
-    <v-row>
+    <!-- <v-row>
       <v-spacer></v-spacer>
-      <v-col class="col-12 col-md-8">
-        <v-card class="pb-3">
-          <v-img class="white--text align-end" src="@/assets/corsi_individuali.jpg" height="200px"></v-img>
-          <v-card-text
-            class="text-center pa-3"
-          >Scarica qui sotto il file .pdf o .doc del test di autovalutazione per la lingua inglese e scopri qual è il tuo livello!</v-card-text>
-          <div class="d-flex justify-center my-3">
-            <div class="d-flex flex-column align-center">
-              <v-btn
-                color="red"
-                dark
-                class="mx-5 mb-2"
-                x-large
-                fab
-                download
-                href="../assets/self-assessment.pdf"
-              >
-                <v-icon>mdi-file-pdf</v-icon>
-              </v-btn>
-              <p>PDF</p>
-            </div>
-            <div class="d-flex flex-column align-center">
-              <v-btn
-                color="indigo"
-                dark
-                class="mx-3 mb-2"
-                x-large
-                fab
-                download
-                href="../assets/self-assessment.doc"
-              >
-                <v-icon>mdi-file-document</v-icon>
-              </v-btn>
-              <p>DOC</p>
-            </div>
+    <v-col class="col-12 col-md-8">-->
+    <v-card shaped class="ma-3 ma-md-12 red darken-4">
+      <v-img class="white--text align-end mb-1" src="@/assets/corsi_individuali.jpg" height="40vh"></v-img>
+      <div class="red darken-4 pa-5 mb-5 white--text">
+        <v-card-text
+          class="text-center pa-3"
+        >Scarica qui sotto il file .pdf o .doc del test di autovalutazione per la lingua inglese e scopri qual è il tuo livello!</v-card-text>
+        <div class="d-flex justify-center my-3">
+          <div class="d-flex flex-column align-center">
+            <v-btn
+              color="white"
+              dark
+              class="mx-5 mb-2"
+              x-large
+              fab
+              download
+              href="../assets/self-assessment.pdf"
+            >
+              <v-icon color="red">mdi-file-pdf</v-icon>
+            </v-btn>
+            <p>PDF</p>
           </div>
-        </v-card>
-      </v-col>
+          <div class="d-flex flex-column align-center">
+            <v-btn
+              color="white"
+              dark
+              class="mx-5 mb-2"
+              x-large
+              fab
+              download
+              href="../assets/self-assessment.doc"
+            >
+              <v-icon color="indigo">mdi-file-document</v-icon>
+            </v-btn>
+            <p>DOC</p>
+          </div>
+        </div>
+      </div>
+    </v-card>
+    <!-- </v-col>
       <v-spacer></v-spacer>
-    </v-row>
+    </v-row>-->
   </v-container>
 </template>
 

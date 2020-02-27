@@ -8,7 +8,7 @@
         </div>
       </v-content>
 
-      <v-footer class="red darken-3">
+      <v-footer class="red darken-3 pt-4">
         <v-spacer></v-spacer>
         <v-card flat tile class="red darken-3 text-center">
           <v-card-text

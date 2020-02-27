@@ -1,6 +1,5 @@
 <template>
   <v-container class="py-5">
-    <h1 class="text-center indigo--text text--darken-4">Emilio Zampieri English</h1>
     <h2
       class="text-center font-italic indigo--text text--darken-4 mb-md-4"
     >Corsi di inglese per privati e aziende a Piove di Sacco dal 2012</h2>

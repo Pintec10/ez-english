@@ -1,30 +1,118 @@
 <template>
   <div>
-    <v-app-bar app color="white" :extension-height="extensHeight">
-      <v-app-bar-nav-icon class="d-md-none" @click="drawer = true"></v-app-bar-nav-icon>
-      <v-spacer class="d-md-none" />
+    <v-app-bar height="70px" class="py-0" app color="red darken-4" :extension-height="extensHeight">
+      <v-sheet tile color="white" height="100%" class="d-flex align-center px-2">
+        <v-app-bar-nav-icon class="d-md-none" @click="drawer = true"></v-app-bar-nav-icon>
 
-      <img height="56px" src="../assets/LogoCropped.png" class="my-3" />
+        <v-toolbar-title>
+          <h1 class="body mr-2">
+            <img
+              @click="$router.push('/')"
+              id="logo"
+              height="70px"
+              src="../assets/LogoCroppedWhite.jpg"
+              alt="Emilio Zampieri English - corsi di inglese per privati e imprese a Piove di Sacco"
+            />
+          </h1>
+        </v-toolbar-title>
+      </v-sheet>
 
-      <v-spacer class="d-none d-md-inline-block" />
-      <v-toolbar-title
-        class="font-weight-bold indigo--text text--darken-4 d-none d-md-inline-block"
-      >Emilio Zampieri English</v-toolbar-title>
+      <!------------------------>
+      <div class="d-none d-md-block red darken-4 mb-0 flex-grow-1" id="navbutton-cont">
+        <v-btn
+          text
+          tile
+          active-class="white red--text text--darken-4"
+          class="white--text"
+          to="/"
+        >Home</v-btn>
 
-      <v-spacer />
+        <v-menu open-on-hover offset-y>
+          <template v-slot:activator="{ on }">
+            <v-btn
+              v-on="on"
+              text
+              tile
+              active-class="white red--text text--darken-4"
+              class="white--text"
+            >
+              Corsi
+              <v-icon class="pl-1">mdi-chevron-down</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item
+              active-class="white red--text text--darken-4"
+              class="white--text"
+              to="/corsi-individuali"
+            >
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Corsi individuali</v-list-item-title>
+            </v-list-item>
+            <v-list-item
+              active-class="white red--text text--darken-4"
+              class="white--text"
+              to="/corsi-gruppo"
+            >
+              <v-list-item-icon>
+                <v-icon>mdi-account-group</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Corsi di gruppo</v-list-item-title>
+            </v-list-item>
+            <v-list-item
+              active-class="white red--text text--darken-4"
+              class="white--text"
+              to="/business"
+            >
+              <v-list-item-icon>
+                <v-icon>mdi-account-tie</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Business</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
 
-      <a class="external-link" href="https://www.linkedin.com/in/emilio-zampieri-722181112/">
-        <v-btn icon>
-          <v-icon large color="indigo darken-4">mdi-linkedin</v-icon>
-        </v-btn>
-      </a>
-      <a class="external-link" href="https://www.facebook.com/corsiinglesepiovedisacco/">
-        <v-btn icon>
-          <v-icon large color="indigo darken-4">mdi-facebook</v-icon>
-        </v-btn>
-      </a>
+        <v-btn
+          text
+          tile
+          active-class="white red--text text--darken-4"
+          class="white--text"
+          to="/valuta-inglese"
+        >Valuta il tuo inglese</v-btn>
 
-      <template v-slot:extension>
+        <v-btn
+          text
+          tile
+          active-class="white red--text text--darken-4"
+          class="white--text"
+          to="/about"
+        >Chi sono</v-btn>
+        <v-btn
+          text
+          tile
+          active-class="white red--text text--darken-4"
+          class="white--text"
+          to="/contact"
+        >Contatti</v-btn>
+      </div>
+      <!------------------------>
+
+      <v-spacer></v-spacer>
+      <div class="ml-2">
+        <a class="external-link mx-2" href="https://www.linkedin.com/in/emilio-zampieri-722181112/">
+          <v-btn icon class="white">
+            <v-icon large color="indigo darken-4">mdi-linkedin</v-icon>
+          </v-btn>
+        </a>
+        <a class="external-link mx-2" href="https://www.facebook.com/corsiinglesepiovedisacco/">
+          <v-btn icon class="white">
+            <v-icon large color="indigo darken-4">mdi-facebook</v-icon>
+          </v-btn>
+        </a>
+      </div>
+      <!-- <template v-slot:extension>
         <div class="d-none d-md-block red darken-4 mb-0">
           <v-btn
             text
@@ -104,7 +192,7 @@
             to="/contact"
           >Contatti</v-btn>
         </div>
-      </template>
+      </template>-->
     </v-app-bar>
 
     <v-navigation-drawer
@@ -246,13 +334,22 @@ export default {
 </script>
 
 <style >
+#logo {
+  object-fit: contain;
+  cursor: pointer;
+}
+
 .external-link {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .v-navigation-drawer--is-mobile:not(.v-navigation-drawer--close),
 .v-navigation-drawer--temporary:not(.v-navigation-drawer--close) {
   position: fixed;
+}
+
+.v-toolbar__title {
+  line-height: 0.5 !important;
 }
 
 .v-toolbar__extension {
@@ -261,5 +358,21 @@ export default {
 }
 .v-btn:not(.v-btn--round).v-size--default {
   height: 48px !important;
+}
+
+header div.v-toolbar__content {
+  padding: 0 !important;
+}
+
+#navbutton-cont {
+  height: 100%;
+}
+
+#navbutton-cont .v-btn:not(.v-btn--round).v-size--default {
+  height: 100% !important;
+}
+
+.test {
+  border: 1px solid green;
 }
 </style>

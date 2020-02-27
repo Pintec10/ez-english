@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="py-10">
-    <h1 class="text-center indigo--text text--darken-4">Corsi individuali</h1>
+    <h2 class="text-center indigo--text text--darken-4">Corsi individuali</h2>
     <v-row class="my-10">
       <v-col class="col-12 col-md-4">
         <v-card shaped height="100%" class="red darken-4 mx-md-1">

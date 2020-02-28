@@ -11,14 +11,16 @@
                   class="white--text align-end mb-1"
                   src="../assets/corsi_standard_individuali.jpg"
                   alt="corsi standard"
-                  height="200px"
+                  height="220px"
                   position="center 15%"
                 >
-                  <div class="title-back">
+                  <div
+                    class="title-back title-back-raised d-flex align-center justify-center text-center"
+                  >
                     <v-card-title class="card-title py-2">Corsi Standard</v-card-title>
                   </div>
                 </v-img>
-                <div class="overflow d-flex flex-column white--text pa-2">
+                <div class="overflow d-flex flex-column white--text pa-3">
                   <p>
                     Il corso standard si avvale di un libro di testo di una autorevole casa editrice inglese
                     (Oxford UP o Cambridge UP), e ha un programma didattico prefissato, che sviluppa tutti
@@ -70,15 +72,17 @@
                   class="white--text align-end mb-1"
                   alt="corsi listening, conversation and grammar"
                   src="../assets/listening_individuali.jpeg"
-                  height="200px"
+                  height="220px"
                   position="center 5%"
                 >
-                  <div class="title-back">
+                  <div
+                    class="title-back title-back-raised d-flex align-center justify-center text-center"
+                  >
                     <v-card-title class="card-title py-2">Listening, Conversation & Grammar</v-card-title>
                   </div>
                 </v-img>
 
-                <div class="overflow white--text pa-2">
+                <div class="overflow d-flex flex-column white--text pa-3">
                   <p>
                     Il corso Listening, Conversation & Grammar è rivolto ai livelli Pre-Intermediate (A2),
                     Intermediate (B1) e Upper-Intermediate (B2), e si tiene esclusivamente in lingua inglese.
@@ -99,6 +103,8 @@
                     <p>A richiesta, il docente può preparare lezioni di argomento tecnico, a seconda delle esigenze dello studente.</p>
                     <p>Passare dal livello B1 al livello B2 richiede solitamente almeno 50-60h di corso. Per il passaggio da B2 a C1, ovvero per ottenere un autentico livello avanzato non solo a livello grammaticale, si calcolino almeno 90h.</p>
                   </div>
+
+                  <div class="flex-grow-1"></div>
 
                   <v-btn block @click="panel2 = !panel2" text class="body-1 text-none white--text">
                     <span v-if="panel2">
@@ -124,16 +130,18 @@
                   class="white--text align-end mb-1"
                   src="../assets/preparazione_esami.jpg"
                   alt="ripetizioni di inglese e corsi di preparazione per esami e certificazioni"
-                  height="200px"
+                  height="220px"
                   position="center 15%"
                 >
-                  <div class="title-back">
+                  <div
+                    class="title-back title-back-raised d-flex align-center justify-center text-center"
+                  >
                     <v-card-title
                       class="card-title py-2"
                     >Preparazione Esami e Certificazioni, Ripetizioni</v-card-title>
                   </div>
                 </v-img>
-                <div class="overflow white--text pa-2">
+                <div class="overflow white--text pa-3">
                   <p>Un tutor qualificato e con esperienza vi seguirà nella preparazione di esami universitari di qualsiasi tipo (lingua, letteratura, ecc.) ed esami Cambridge quali IELTS, KET, PET e FIRST.</p>
                   <p>Per gli studenti delle scuole superiori, supporto scolastico durante l'anno e in estate per recupero debiti ed esami di maturità.</p>
                 </div>
@@ -161,10 +169,14 @@ export default {
 <style >
 .overflow {
   overflow: auto;
-  height: 50vh;
+  height: 62vh;
 }
 
 .card-title {
   word-break: break-word;
+}
+
+.title-back-raised {
+  height: 80px;
 }
 </style>

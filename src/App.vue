@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <div class="white">
+    <div class="grey lighten-5">
       <HeaderNav />
       <v-content>
         <div class="py-0">

@@ -1,15 +1,17 @@
 <template>
   <div>
-    <v-app-bar height="70px" class="py-0" app color="red darken-4" :extension-height="extensHeight">
+    <v-app-bar height="80px" class="py-0" app color="red darken-4" :extension-height="extensHeight">
       <v-sheet tile color="white" height="100%" class="d-flex align-center px-2">
+        <!---- burger button (mobile) ---->
         <v-app-bar-nav-icon class="d-md-none" @click="drawer = true"></v-app-bar-nav-icon>
+        <!---- /burger button (mobile) ---->
 
         <v-toolbar-title>
           <h1 class="body mr-2">
             <img
               @click="$router.push('/')"
               id="logo"
-              height="70px"
+              height="80px"
               src="../assets/LogoCroppedWhite.jpg"
               alt="Emilio Zampieri English - corsi di inglese per privati e imprese a Piove di Sacco"
             />
@@ -17,7 +19,7 @@
         </v-toolbar-title>
       </v-sheet>
 
-      <!------------------------>
+      <!----------- horizontal nav (desktop) ------------->
       <div class="d-none d-md-block red darken-4 mb-0 flex-grow-1" id="navbutton-cont">
         <v-btn
           text
@@ -27,6 +29,7 @@
           to="/"
         >Home</v-btn>
 
+        <!-- popup menu -->
         <v-menu open-on-hover offset-y>
           <template v-slot:activator="{ on }">
             <v-btn
@@ -41,31 +44,19 @@
             </v-btn>
           </template>
           <v-list>
-            <v-list-item
-              active-class="white red--text text--darken-4"
-              class="white--text"
-              to="/corsi-individuali"
-            >
+            <v-list-item active-class="white red--text text--darken-4" to="/corsi-individuali">
               <v-list-item-icon>
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
               <v-list-item-title>Corsi individuali</v-list-item-title>
             </v-list-item>
-            <v-list-item
-              active-class="white red--text text--darken-4"
-              class="white--text"
-              to="/corsi-gruppo"
-            >
+            <v-list-item active-class="white red--text text--darken-4" to="/corsi-gruppo">
               <v-list-item-icon>
                 <v-icon>mdi-account-group</v-icon>
               </v-list-item-icon>
               <v-list-item-title>Corsi di gruppo</v-list-item-title>
             </v-list-item>
-            <v-list-item
-              active-class="white red--text text--darken-4"
-              class="white--text"
-              to="/business"
-            >
+            <v-list-item active-class="white red--text text--darken-4" to="/business">
               <v-list-item-icon>
                 <v-icon>mdi-account-tie</v-icon>
               </v-list-item-icon>
@@ -73,6 +64,7 @@
             </v-list-item>
           </v-list>
         </v-menu>
+        <!-- /popup menu -->
 
         <v-btn
           text
@@ -97,9 +89,11 @@
           to="/contact"
         >Contatti</v-btn>
       </div>
-      <!------------------------>
+      <!----------- /horizontal nav (desktop) ------------->
 
       <v-spacer></v-spacer>
+
+      <!----------- social buttons ------------->
       <div class="ml-2">
         <a class="external-link mx-2" href="https://www.linkedin.com/in/emilio-zampieri-722181112/">
           <v-btn icon class="white">
@@ -112,89 +106,10 @@
           </v-btn>
         </a>
       </div>
-      <!-- <template v-slot:extension>
-        <div class="d-none d-md-block red darken-4 mb-0">
-          <v-btn
-            text
-            tile
-            active-class="white red--text text--darken-4"
-            class="white--text"
-            to="/"
-          >Home</v-btn>
-
-          <v-menu open-on-hover offset-y>
-            <template v-slot:activator="{ on }">
-              <v-btn
-                v-on="on"
-                text
-                tile
-                active-class="white red--text text--darken-4"
-                class="white--text"
-              >
-                Corsi
-                <v-icon class="pl-1">mdi-chevron-down</v-icon>
-              </v-btn>
-            </template>
-            <v-list>
-              <v-list-item
-                active-class="white red--text text--darken-4"
-                class="white--text"
-                to="/corsi-individuali"
-              >
-                <v-list-item-icon>
-                  <v-icon>mdi-account</v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>Corsi individuali</v-list-item-title>
-              </v-list-item>
-              <v-list-item
-                active-class="white red--text text--darken-4"
-                class="white--text"
-                to="/corsi-gruppo"
-              >
-                <v-list-item-icon>
-                  <v-icon>mdi-account-group</v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>Corsi di gruppo</v-list-item-title>
-              </v-list-item>
-              <v-list-item
-                active-class="white red--text text--darken-4"
-                class="white--text"
-                to="/business"
-              >
-                <v-list-item-icon>
-                  <v-icon>mdi-account-tie</v-icon>
-                </v-list-item-icon>
-                <v-list-item-title>Business</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-
-          <v-btn
-            text
-            tile
-            active-class="white red--text text--darken-4"
-            class="white--text"
-            to="/valuta-inglese"
-          >Valuta il tuo inglese</v-btn>
-
-          <v-btn
-            text
-            tile
-            active-class="white red--text text--darken-4"
-            class="white--text"
-            to="/about"
-          >Chi sono</v-btn>
-          <v-btn
-            text
-            tile
-            active-class="white red--text text--darken-4"
-            class="white--text"
-            to="/contact"
-          >Contatti</v-btn>
-        </div>
-      </template>-->
+      <!----------- /social buttons ------------->
     </v-app-bar>
 
+    <!----------- vertical nav (mobile) ------------->
     <v-navigation-drawer
       class="d-md-none red darken-4"
       v-model="drawer"
@@ -288,6 +203,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+    <!----------- /vertical nav (mobile) ------------->
   </div>
 </template>
 

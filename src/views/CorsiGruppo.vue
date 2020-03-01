@@ -109,7 +109,7 @@ export default {};
 }
 
 @media only screen and (min-width: 960px) {
-  .list-column .v-list-item__title {
+  .list-column {
     column-count: 2;
     column-fill: auto;
   }

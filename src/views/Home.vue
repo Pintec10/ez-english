@@ -1,7 +1,7 @@
 <template>
   <v-container class="py-5">
     <h2
-      class="text-center font-italic indigo--text text--darken-4 mt-4 mb-8"
+      class="text-center indigo--text text--darken-4 mt-4 mb-8"
     >Corsi di inglese per privati e aziende a Piove di Sacco</h2>
 
     <main>

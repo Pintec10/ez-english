@@ -20,7 +20,7 @@
       </v-sheet>
 
       <!----------- horizontal nav (desktop) ------------->
-      <div class="d-none d-md-block red darken-4 mb-0 flex-grow-1" id="navbutton-cont">
+      <div id="navbutton-cont" class="d-none d-md-block red darken-4 mb-0 flex-grow-1">
         <v-btn
           text
           tile
@@ -295,7 +295,7 @@ header div.v-toolbar__content {
   height: 100% !important;
 }
 
-.test {
-  border: 1px solid green;
+#navbutton-cont .v-btn.v-size--default {
+  font-size: 0.77rem !important;
 }
 </style>

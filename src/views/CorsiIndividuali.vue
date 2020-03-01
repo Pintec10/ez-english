@@ -5,7 +5,7 @@
       <v-row class="my-10">
         <v-col class="col-12 col-md-4">
           <section>
-            <v-card shaped height="100%" class="red darken-4 mx-md-1">
+            <v-card shaped height="100%" class="red darken-4 mx-md-1 pb-4">
               <article>
                 <v-img
                   class="white--text align-end mb-1"
@@ -47,7 +47,7 @@
                     block
                     @click="panel1 = !panel1"
                     text
-                    class="body-1 text-none align-self-end white--text"
+                    class="text-none align-self-end white--text"
                   >
                     <span v-if="panel1">
                       Chiudi
@@ -66,7 +66,7 @@
 
         <v-col class="col-12 col-md-4">
           <section>
-            <v-card shaped class="red darken-4 mx-md-1" height="100%">
+            <v-card shaped class="red darken-4 mx-md-1 pb-4" height="100%">
               <article>
                 <v-img
                   class="white--text align-end mb-1"
@@ -106,7 +106,7 @@
 
                   <div class="flex-grow-1"></div>
 
-                  <v-btn block @click="panel2 = !panel2" text class="body-1 text-none white--text">
+                  <v-btn block @click="panel2 = !panel2" text class="text-none white--text">
                     <span v-if="panel2">
                       Chiudi
                       <v-icon class="ml-1 white--text">mdi-chevron-up</v-icon>
@@ -124,7 +124,7 @@
 
         <v-col class="col-12 col-sm-6 col-md-4">
           <section>
-            <v-card shaped height="100%" class="red darken-4 mx-md-1">
+            <v-card shaped height="100%" class="red darken-4 mx-md-1 pb-4">
               <article>
                 <v-img
                   class="white--text align-end mb-1"
@@ -166,7 +166,7 @@ export default {
 };
 </script>
 
-<style >
+<style scoped>
 .overflow {
   overflow: auto;
   height: 62vh;
@@ -178,5 +178,9 @@ export default {
 
 .title-back-raised {
   height: 80px;
+}
+
+article {
+  overflow: hidden;
 }
 </style>

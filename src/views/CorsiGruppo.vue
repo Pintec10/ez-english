@@ -101,9 +101,15 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
+.list-column .v-list-item__title {
+  overflow: visible !important;
+  text-overflow: initial !important;
+  white-space: normal !important;
+}
+
 @media only screen and (min-width: 960px) {
-  .list-column {
+  .list-column .v-list-item__title {
     column-count: 2;
     column-fill: auto;
   }

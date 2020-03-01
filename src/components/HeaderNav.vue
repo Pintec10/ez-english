@@ -95,12 +95,20 @@
 
       <!----------- social buttons ------------->
       <div class="ml-2">
-        <a class="external-link mx-2" href="https://www.linkedin.com/in/emilio-zampieri-722181112/">
+        <a
+          class="external-link mx-2"
+          href="https://www.linkedin.com/in/emilio-zampieri-722181112/"
+          target="_blank"
+        >
           <v-btn icon class="white">
             <v-icon large color="indigo darken-4">mdi-linkedin</v-icon>
           </v-btn>
         </a>
-        <a class="external-link mx-2" href="https://www.facebook.com/corsiinglesepiovedisacco/">
+        <a
+          class="external-link mx-2"
+          href="https://www.facebook.com/corsiinglesepiovedisacco/"
+          target="_blank"
+        >
           <v-btn icon class="white">
             <v-icon large color="indigo darken-4">mdi-facebook</v-icon>
           </v-btn>
@@ -134,20 +142,6 @@
             <v-list-item-title class="white--text">Home</v-list-item-title>
           </v-list-item>
 
-          <v-list-item active-class="red darken-2 white--text" to="/about">
-            <v-list-item-icon>
-              <v-icon color="white">mdi-chat</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title class="white--text">Chi sono</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item active-class="red darken-2 white--text" to="/contact">
-            <v-list-item-icon>
-              <v-icon color="white">mdi-send</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title class="white--text">Contatti</v-list-item-title>
-          </v-list-item>
-
           <v-menu open-on-click offset-x>
             <template v-slot:activator="{ on }">
               <v-list-item v-on="on" active-class="red darken-2 white--text">
@@ -159,7 +153,6 @@
                 <v-icon color="white">mdi-chevron-right</v-icon>
               </v-list-item>
             </template>
-
             <v-list color="red darken-4">
               <v-list-item
                 class="red darken-4 white--text"
@@ -199,6 +192,20 @@
               <v-icon color="white">mdi-book-search</v-icon>
             </v-list-item-icon>
             <v-list-item-title class="white--text">Valuta il tuo inglese</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item active-class="red darken-2 white--text" to="/about">
+            <v-list-item-icon>
+              <v-icon color="white">mdi-chat</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title class="white--text">Chi sono</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item active-class="red darken-2 white--text" to="/contact">
+            <v-list-item-icon>
+              <v-icon color="white">mdi-send</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title class="white--text">Contatti</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>

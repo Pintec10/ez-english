@@ -12,10 +12,22 @@
             height="50vh"
             position="center 5%"
           ></v-img>
-          <div class="red darken-4 pa-5 mb-5 white--text">
-            <v-card-text
-              class="pa-4"
-            >Per tutte le aziende che commerciano con l'estero, Emilio Zampieri English offre corsi e lezioni individuali o di gruppo presso la sede aziendale per migliorare l'inglese generale, commerciale e tecnico.</v-card-text>
+          <div class="red darken-4 mb-5 white--text">
+            <v-card-text>
+              <p>
+                Per tutte le aziende che commerciano con l'estero, Emilio Zampieri English offre
+                corsi e lezioni individuali o di gruppo presso la sede aziendale per migliorare l'inglese
+                generale, commerciale e tecnico.
+              </p>
+              <p>
+                Scrivete a
+                <a
+                  href="mailto: emilio.zampieri@gmail.com"
+                  class="white--text"
+                >emilio.zampieri@gmail.com</a> per ricevere un preventivo con il piano
+                di studi adatto alla vostra azienda.
+              </p>
+            </v-card-text>
           </div>
         </article>
       </v-card>

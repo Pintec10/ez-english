@@ -47,7 +47,7 @@
                     block
                     @click="panel1 = !panel1"
                     text
-                    class="text-none align-self-end white--text"
+                    class="text-none align-self-end justify-self-center white--text"
                   >
                     <span v-if="panel1">
                       Chiudi
@@ -106,7 +106,12 @@
 
                   <div class="flex-grow-1"></div>
 
-                  <v-btn block @click="panel2 = !panel2" text class="text-none white--text">
+                  <v-btn
+                    block
+                    @click="panel2 = !panel2"
+                    text
+                    class="text-none align-self-end white--text"
+                  >
                     <span v-if="panel2">
                       Chiudi
                       <v-icon class="ml-1 white--text">mdi-chevron-up</v-icon>
@@ -176,8 +181,20 @@ export default {
   word-break: break-word;
 }
 
+.v-card__title {
+  font-size: 1.15rem !important;
+}
+
+.v-card {
+  font-size: 0.9rem !important;
+}
+
 .title-back-raised {
   height: 80px;
+}
+
+.v-btn--block {
+  flex: initial;
 }
 
 article {

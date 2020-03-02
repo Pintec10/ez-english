@@ -108,6 +108,10 @@ export default {};
   white-space: normal !important;
 }
 
+.v-card__title {
+  word-break: normal !important;
+}
+
 @media only screen and (min-width: 960px) {
   .list-column {
     column-count: 2;

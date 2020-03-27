@@ -7,7 +7,7 @@
         <article>
           <v-img
             class="white--text align-end mb-1"
-            src="../assets/business_business_crop.jpeg"
+            src="../assets/business_business_crop_r.jpeg"
             alt="corsi business"
             height="50vh"
             position="center 5%"

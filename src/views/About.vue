@@ -15,7 +15,7 @@
             <h2 class="mb-2">Chi sono</h2>
             <p>Sono un docente libero professionista di lingua inglese, Dottore di Ricerca in Lingua e Letteratura Inglese.</p>
             <p></p>
-            <p>Ho iniziato la mia attività insegnando in grandi aziende e società del Veneto (tra le quali, Forall Pal Zileri, Siemens, Gruppo Mastrotto, Artoni, solo per citarne alcune) a tutti i livelli. Col tempo si sono aggiunte altre aziende di piccole e medie dimensione. Ciò mi ha dato la possibilità di sperimentare diversi tipi di realtà commerciali.</p>
+            <p>Ho iniziato la mia attività insegnando in grandi aziende e società del Veneto (tra le quali, Forall Pal Zileri, Siemens, Gruppo Mastrotto, Artoni, solo per citarne alcune) a tutti i livelli. Col tempo si sono aggiunte altre aziende di piccole e medie dimensioni. Ciò mi ha dato la possibilità di sperimentare diversi tipi di realtà commerciali.</p>
 
             <p>All'insegnamento aziendale ho presto associato quello privato individuale e a due, con varie modalità e approcci.</p>
             <p>Dal 2014 sono l'organizzatore didattico e docente dei corsi di inglese organizzati dall'incubatore di imprese Crazy Lab, a Piove di Sacco (PD).</p>

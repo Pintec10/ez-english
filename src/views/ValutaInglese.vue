@@ -24,7 +24,7 @@
                   x-large
                   fab
                   download
-                  href="../assets/self-assessment.pdf"
+                  href="https://www.emiliozampieri.it/self-assessment.pdf"
                 >
                   <v-icon color="red">mdi-file-pdf</v-icon>
                 </v-btn>
@@ -38,7 +38,7 @@
                   x-large
                   fab
                   download
-                  href="../assets/self-assessment.doc"
+                  href="https://www.emiliozampieri.it/self-assessment.doc"
                 >
                   <v-icon color="indigo">mdi-file-document</v-icon>
                 </v-btn>

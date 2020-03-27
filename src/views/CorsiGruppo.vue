@@ -6,7 +6,7 @@
         <article>
           <v-img
             class="white--text align-end mb-1"
-            src="../assets/corsi_gruppo_gruppo.jpg"
+            src="../assets/corsi_gruppo_gruppo_r.jpg"
             alt="corsi di gruppo"
             height="50vh"
             position="center 28%"

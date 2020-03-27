@@ -13,7 +13,7 @@
         show-arrows-on-hover
       >
         <v-carousel-item
-          src="../assets/corsi_individuali_homepage.jpeg"
+          src="../assets/corsi_individuali_homepage_r.jpeg"
           alt="corsi individuali"
           position="center 5%"
           to="/corsi-individuali"
@@ -25,7 +25,7 @@
           </v-sheet>
         </v-carousel-item>
         <v-carousel-item
-          src="../assets/corsi_gruppo_homepage.jpeg"
+          src="../assets/corsi_gruppo_homepage_r.jpeg"
           alt="corsi di gruppo"
           position="center 10%"
           to="/corsi-gruppo"
@@ -36,7 +36,11 @@
             </v-row>
           </v-sheet>
         </v-carousel-item>
-        <v-carousel-item src="../assets/business_homepage.jpeg" alt="corsi business" to="/business">
+        <v-carousel-item
+          src="../assets/business_homepage_r.jpeg"
+          alt="corsi business"
+          to="/business"
+        >
           <v-sheet color="transparent" height="100%">
             <v-row align="start" justify="center">
               <div class="display-1 title-back text-center py-3">Corsi Business</div>

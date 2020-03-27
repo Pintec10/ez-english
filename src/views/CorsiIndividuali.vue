@@ -71,7 +71,7 @@
                 <v-img
                   class="white--text align-end mb-1"
                   alt="corsi listening, conversation and grammar"
-                  src="../assets/listening_individuali.jpeg"
+                  src="../assets/listening_individuali_r.jpeg"
                   height="220px"
                   position="center 5%"
                 >

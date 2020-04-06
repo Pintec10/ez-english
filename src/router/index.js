@@ -47,13 +47,6 @@ const routes = [
     component: ValutaInglese
   },
 
-  /* PATHS TO EVALUATE
-    /contact
-    /corsi-individuali
-    /corsi-gruppo
-    /business
-    /valuta-inglese
-  */
 ]
 
 const router = new VueRouter({

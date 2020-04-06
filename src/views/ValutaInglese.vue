@@ -6,7 +6,7 @@
         <article>
           <v-img
             class="white--text align-end mb-1"
-            src="@/assets/valuta_valuta.jpg"
+            src="@/assets/valuta_valuta_r.jpg"
             alt="valuta il tuo inglese"
             height="50vh"
             position="center 50%"

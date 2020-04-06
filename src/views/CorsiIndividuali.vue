@@ -9,7 +9,7 @@
               <article>
                 <v-img
                   class="white--text align-end mb-1"
-                  src="../assets/corsi_standard_individuali.jpg"
+                  src="../assets/corsi_standard_individuali_r.jpg"
                   alt="corsi standard"
                   height="220px"
                   position="center 15%"
@@ -133,7 +133,7 @@
               <article>
                 <v-img
                   class="white--text align-end mb-1"
-                  src="../assets/preparazione_esami.jpg"
+                  src="../assets/preparazione_esami_r.jpg"
                   alt="ripetizioni di inglese e corsi di preparazione per esami e certificazioni"
                   height="220px"
                   position="center 15%"

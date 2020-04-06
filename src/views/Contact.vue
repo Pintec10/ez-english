@@ -68,19 +68,12 @@
       <v-row>
         <v-col class="col-12 col-md-6 px-8 text-center">
           <v-card class="info-box">
-            <!-- <v-form
-              id="messageForm"
-              v-model="valid"
-              method="post"
-              action="https://send.pageclip.co/BkgRu5V123sMDovgYm24ffR7mmyCKtxn/Emilio-info-form"
-              class="pageclip-form"
-            >-->
-            <!-- good action link for final build below. Above for testing -->
+            <!-- insert pageClip private key in the v-form below -->
             <v-form
               id="messageForm"
               v-model="valid"
               method="post"
-              action="https://send.pageclip.co/BM0QmxMC7pHGQrRhKCZ4VwfTM85PuQQg/form-informazioni"
+              action="https://send.pageclip.co/{here-goes-private-key}/form-informazioni"
               class="pageclip-form"
             >
               <v-sheet tile color="red darken-4" class="py-5 white--text">
@@ -159,7 +152,7 @@
 <script>
 import Vue from "vue";
 import { VueReCaptcha } from "vue-recaptcha-v3";
-Vue.use(VueReCaptcha, { siteKey: "(edited)" }); //insert here Google captcha siteKey!
+Vue.use(VueReCaptcha, { siteKey: "{here-goes-private-key}" }); //insert here Google captcha siteKey!
 
 export default {
   data() {

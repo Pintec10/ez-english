@@ -68,12 +68,12 @@
       <v-row>
         <v-col class="col-12 col-md-6 px-8 text-center">
           <v-card class="info-box">
-            <!-- insert pageClip private key in the v-form below -->
+            <!-- insert pageClip private key in the v-form below FOR PROD -->
             <v-form
               id="messageForm"
               v-model="valid"
               method="post"
-              action="https://send.pageclip.co/{here-goes-private-key}/form-informazioni"
+              action="https://send.pageclip.co/BM0QmxMC7pHGQrRhKCZ4VwfTM85PuQQg/form-informazioni"
               class="pageclip-form"
             >
               <v-sheet tile color="red darken-4" class="py-5 white--text">
@@ -152,7 +152,7 @@
 <script>
 import Vue from "vue";
 import { VueReCaptcha } from "vue-recaptcha-v3";
-Vue.use(VueReCaptcha, { siteKey: "{here-goes-private-key}" }); //insert here Google captcha siteKey!
+Vue.use(VueReCaptcha, { siteKey: "6LdbuN0UAAAAAMFuEBJ7twwtwgH49KrNWq2WrYZL" }); //insert here Google captcha siteKey!
 
 export default {
   data() {
@@ -160,18 +160,18 @@ export default {
       loading: false,
       alert: {
         type: null,
-        message: null
+        message: null,
       },
       valid: false,
       nome: "",
       email: "",
       messaggio: "",
-      nameRules: [v => !!v || "Inserisci un nome"],
+      nameRules: [(v) => !!v || "Inserisci un nome"],
       emailRules: [
-        v => !!v || "Inserisci un indirizzo email",
-        v => /.+@.+/.test(v) || "Indirizzo email non valido"
+        (v) => !!v || "Inserisci un indirizzo email",
+        (v) => /.+@.+/.test(v) || "Indirizzo email non valido",
       ],
-      messageRules: [v => !!v || "Descrivi le informazioni che ti servono"]
+      messageRules: [(v) => !!v || "Descrivi le informazioni che ti servono"],
     };
   },
 
@@ -186,7 +186,7 @@ export default {
           this.alert.message =
             "Non è stato possibile inviare il messaggio per un problema tecnico. Puoi anche scrivere un'email a emilio.zampieri@gmail.com";
         });
-    }
+    },
   },
 
   mounted() {
@@ -208,9 +208,9 @@ export default {
         }
         return false;
       },
-      successTemplate: "<span>Thank you!</span>"
+      successTemplate: "<span>Thank you!</span>",
     });
-  }
+  },
 };
 </script>
 

@@ -9,12 +9,12 @@
           </div>
         </v-content>
 
-        <v-footer class="red darken-3 pt-4">
+        <v-footer class="red darken-3 pt-4 mt-8">
           <v-spacer></v-spacer>
           <v-card flat tile class="red darken-3 text-center">
             <v-card-text
               class="white--text pt-0 full-width"
-            >© Emilio Zampieri English - P.IVA 04622620286</v-card-text>
+            >Dr Emilio Zampieri, Phd - Dottore di Ricerca in Lingua e Letteratura Inglese - P.IVA 04622620286</v-card-text>
             <v-card-text
               class="white--text pt-0 full-width link"
               @click="overlay = true"

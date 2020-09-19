@@ -7,6 +7,7 @@ import CorsiIndividuali from '../views/CorsiIndividuali.vue'
 import CorsiGruppo from '../views/CorsiGruppo.vue'
 import Business from '../views/Business.vue'
 import ValutaInglese from '../views/ValutaInglese.vue'
+import PercheSceglierci from '../views/PercheSceglierci.vue'
 
 Vue.use(VueRouter)
 
@@ -46,10 +47,22 @@ const routes = [
     name: 'ValutaInglese',
     component: ValutaInglese
   },
+  {
+    path: '/perche-sceglierci',
+    name: 'PercheSceglierci',
+    component: PercheSceglierci
+  },
 
 ]
 
 const router = new VueRouter({
+  scrollBehavior: function (to) {
+    if (to.hash) {
+      return { selector: to.hash }
+    } else {
+      return { x: 0, y: 0 }
+    }
+  },
   routes
 })
 

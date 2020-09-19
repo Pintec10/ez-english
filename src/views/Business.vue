@@ -15,9 +15,13 @@
           <div class="red darken-4 mb-5 white--text">
             <v-card-text>
               <p>
-                Per tutte le aziende che commerciano con l'estero, Emilio Zampieri English offre
-                corsi e lezioni individuali o di gruppo presso la sede aziendale per migliorare l'inglese
-                generale, commerciale e tecnico.
+                Se avete un'azienda che commercia con l'estero, affidatevi a un docente con grande esperienza
+                commerciale presso importanti aziende del Veneto (Forall Pal Zileri, Siemes, Gruppo Mastrotto, Artoni,
+                Comel, Mediagraf, solo per citarne alcune).
+              </p>
+              <p>
+                Corsi individuali e di gruppo presso la vostra sede per migliorare
+                l'inglese generale, commerciale e tecnico.
               </p>
               <p>
                 Scrivete a

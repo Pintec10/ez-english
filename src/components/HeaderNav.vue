@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar height="80px" class="py-0" app color="red darken-4" :extension-height="extensHeight">
-      <v-sheet tile color="white" height="100%" class="d-flex align-center px-2">
+      <v-sheet tile color="white" height="100%" class="d-flex align-center">
         <!---- burger button (mobile) ---->
         <v-app-bar-nav-icon class="d-md-none" @click="drawer = true"></v-app-bar-nav-icon>
         <!---- /burger button (mobile) ---->
@@ -25,7 +25,7 @@
           text
           tile
           active-class="white red--text text--darken-4"
-          class="white--text"
+          class="white--text px-3"
           to="/"
         >Home</v-btn>
 
@@ -36,8 +36,8 @@
               v-on="on"
               text
               tile
-              active-class="white red--text text--darken-4"
-              class="white--text"
+              active-class="white red--text text--darken-4 "
+              class="white--text px-3"
             >
               Corsi
               <v-icon class="pl-1">mdi-chevron-down</v-icon>
@@ -70,7 +70,7 @@
           text
           tile
           active-class="white red--text text--darken-4"
-          class="white--text"
+          class="white--text px-3"
           to="/valuta-inglese"
         >Valuta il tuo inglese</v-btn>
 
@@ -78,14 +78,21 @@
           text
           tile
           active-class="white red--text text--darken-4"
-          class="white--text"
+          class="white--text px-3"
           to="/about"
         >Chi sono</v-btn>
         <v-btn
           text
           tile
-          active-class="white red--text text--darken-4"
-          class="white--text"
+          active-class="white red--text text--darken-4 "
+          class="white--text px-3"
+          to="/perche-sceglierci"
+        >Perché sceglierci</v-btn>
+        <v-btn
+          text
+          tile
+          active-class="white red--text text--darken-4 "
+          class="white--text px-2"
           to="/contact"
         >Contatti</v-btn>
       </div>
@@ -201,6 +208,13 @@
             <v-list-item-title class="white--text">Chi sono</v-list-item-title>
           </v-list-item>
 
+          <v-list-item active-class="red darken-2 white--text" to="/perche-sceglierci">
+            <v-list-item-icon>
+              <v-icon color="white">mdi-human-greeting</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title class="white--text">Perché sceglierci</v-list-item-title>
+          </v-list-item>
+
           <v-list-item active-class="red darken-2 white--text" to="/contact">
             <v-list-item-icon>
               <v-icon color="white">mdi-send</v-icon>
@@ -227,15 +241,15 @@ export default {
         {
           title: "Corsi individuali",
           icon: "mdi-account",
-          link: "/corsi-individuali"
+          link: "/corsi-individuali",
         },
         {
           title: "Corsi di Gruppo",
           icon: "mdi-account-group",
-          link: "/corsi-gruppo"
+          link: "/corsi-gruppo",
         },
-        { title: "Business", icon: "mdi-account-tie", link: "/business" }
-      ]
+        { title: "Business", icon: "mdi-account-tie", link: "/business" },
+      ],
     };
   },
 
@@ -246,13 +260,13 @@ export default {
       } else {
         this.extensHeight = 0;
       }
-    }
+    },
   },
 
   created() {
     window.addEventListener("resize", this.updateNavbar);
     this.updateNavbar();
-  }
+  },
 };
 </script>
 

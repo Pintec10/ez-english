@@ -73,7 +73,7 @@
               id="messageForm"
               v-model="valid"
               method="post"
-              action="https://send.pageclip.co/BM0QmxMC7pHGQrRhKCZ4VwfTM85PuQQg/form-informazioni"
+              action="https://send.pageclip.co/{PRIVATE_KEY}/form-informazioni"
               class="pageclip-form"
             >
               <v-sheet tile color="red darken-4" class="py-5 white--text">
@@ -152,7 +152,7 @@
 <script>
 import Vue from "vue";
 import { VueReCaptcha } from "vue-recaptcha-v3";
-Vue.use(VueReCaptcha, { siteKey: "6LdbuN0UAAAAAMFuEBJ7twwtwgH49KrNWq2WrYZL" }); //insert here Google captcha siteKey!
+Vue.use(VueReCaptcha, { siteKey: "{PRIVATE_KEY}" }); //insert here Google captcha siteKey!
 
 export default {
   data() {

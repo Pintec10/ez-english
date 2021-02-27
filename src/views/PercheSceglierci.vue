@@ -15,25 +15,31 @@
                     height="60vh"
                     position="center 5%"
                   ></v-img>
-                  <div class="red darken-4 pa-5 mb-5 white--text">
-                    <v-card-text class="pa-3">
-                      Se hai già provato vari corsi senza veri risultati, con Emilio Zampieri English impari l'inglese una volta per
-                      tutte, e
-                      <span
-                        class="underlined bold"
-                      >facendo quello che ti piace</span>, attraverso corsi personalizzati in base alle tue esigenze e
-                      <span
-                        class="underlined bold"
-                      >ai tuoi interessi</span>, dall'arte allo sport, dall'economia alla cucina, dall'inglese che si usa in ufficio a quello del
-                      marketing. Perché sono la motivazione e la passione a fare la differenza!
+                  <div class="red darken-4 pa-5 mb-5 white--text text-justify">
+                    <v-card-text class="pa-3 text-16">
+                      Se hai già provato vari corsi senza veri risultati, con EZ
+                      English School impari l'inglese una volta per tutte, e
+                      <span class="bold">facendo quello che ti piace</span>,
+                      attraverso corsi personalizzati in base alle tue esigenze
+                      e <span class="bold">ai tuoi interessi</span>, dall'arte
+                      allo sport, dall'economia alla cucina, dall'inglese
+                      commerciale al marketing. Perché una forte motivazione fa
+                      la differenza!
                     </v-card-text>
-                    <v-card-text class="pa-3">
-                      A tua disposizione un docente con 10 anni di esperienza nell'insegnamento della lingua inglese a tutti i
-                      livelli e nei più svariati settori.
+                    <v-card-text class="pa-3 text-16">
+                      A tua disposizione un docente con 10 anni di esperienza
+                      nell'insegnamento della lingua inglese a tutti i livelli e
+                      nei più svariati settori.
                     </v-card-text>
-                    <v-card-text class="pa-3">
-                      Inglese a 360°. Non solo grammatica, ma anche lessico, comprensione orale e conversazione. Per poterlo
-                      scrivere, leggere, capire e soprattutto parlare veramente e con la pronuncia corretta!
+                    <v-card-text class="pa-3 text-16">
+                      Inglese a 360°. Non solo grammatica, ma anche ampliamento
+                      del lessico, comprensione orale e conversazione. Per
+                      poterlo scrivere, leggere, capire e soprattutto parlare
+                      veramente e con la pronuncia corretta.
+                    </v-card-text>
+                    <v-card-text class="pa-3 text-16">
+                      Tutte le lezioni a partire dal livello Preintermedio (A2)
+                      vengono svolte esclusivamente in lingua.
                     </v-card-text>
                   </div>
                 </article>
@@ -44,9 +50,15 @@
       </section>
       <div id="commenti-studenti"></div>
       <section>
-        <h3 class="text-center indigo--text text--darken-4 mt-12">Scopri cosa dicono gli studenti</h3>
+        <h3 class="text-center indigo--text text--darken-4 mt-12">
+          Scopri cosa dicono gli studenti
+        </h3>
         <v-slide-group v-model="model" class="pa-4" show-arrows center-active>
-          <v-slide-item v-for="n in 19" :key="n" v-slot:default="{ active, toggle }">
+          <v-slide-item
+            v-for="n in 19"
+            :key="n"
+            v-slot:default="{ active, toggle }"
+          >
             <v-card
               :color="active ? 'red darken-4' : 'red-border'"
               class="ma-4 red-border slide-card d-flex flex-column justify-center"
@@ -68,12 +80,13 @@
                   <v-icon size="20px">mdi-comment-quote</v-icon>
                 </v-btn>
               </div>
-              <v-card-title>{{comments[n-1].author}}</v-card-title>
+              <v-card-title>{{ comments[n - 1].author }}</v-card-title>
 
               <v-card-subtitle
                 v-bind:class="{ activeComment: active }"
                 class="overline"
-              >{{comments[n-1].job}}</v-card-subtitle>
+                >{{ comments[n - 1].job }}</v-card-subtitle
+              >
             </v-card>
           </v-slide-item>
         </v-slide-group>
@@ -87,12 +100,18 @@
           >
             <v-row class="fill-height" align="center" justify="center">
               <v-list-item three-line>
-                <v-list-item-content>
-                  <v-list-item-title class="display-1 text--primary mb-4">{{comments[model].author}}</v-list-item-title>
-                  <v-list-item-subtitle
-                    class="overline mb-4"
-                  >{{comments[model].job + ", " + comments[model].place + " - " + comments[model].course}}</v-list-item-subtitle>
-                  {{comments[model].text}}
+                <v-list-item-content class="text-justify">
+                  <v-list-item-title class="display-1 text--primary mb-4">{{
+                    comments[model].author
+                  }}</v-list-item-title>
+                  <v-list-item-subtitle class="overline mb-4">{{
+                    comments[model].job +
+                    ", " +
+                    comments[model].place +
+                    " - " +
+                    comments[model].course
+                  }}</v-list-item-subtitle>
+                  {{ comments[model].text }}
                 </v-list-item-content>
               </v-list-item>
             </v-row>
@@ -307,5 +326,10 @@ export default {
   position: absolute;
   top: -15px;
   left: calc(50% - 15px);
+}
+
+.text-16 {
+  font-size: 16px;
+  line-height: 24px;
 }
 </style>

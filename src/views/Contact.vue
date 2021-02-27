@@ -5,7 +5,11 @@
       <v-row>
         <v-col class="col-12 col-md-4 px-8 my-8 my-md-8">
           <a href="tel:+393472208699" class="external-link">
-            <v-card shaped height="100%" class="text-center red darken-4 d-flex flex-column">
+            <v-card
+              shaped
+              height="100%"
+              class="text-center red darken-4 d-flex flex-column"
+            >
               <v-sheet color="white" class="py-3 contact-icon-box">
                 <v-img
                   class="my-3"
@@ -25,7 +29,11 @@
         </v-col>
         <v-col class="col-12 col-md-4 px-8 my-2 my-md-8">
           <a href="mailto:emilio.zampieri@gmail.com" class="external-link">
-            <v-card shaped height="100%" class="text-center red darken-4 d-flex flex-column">
+            <v-card
+              shaped
+              height="100%"
+              class="text-center red darken-4 d-flex flex-column"
+            >
               <v-sheet color="white" class="py-3 contact-icon-box">
                 <v-img
                   class="my-3"
@@ -44,7 +52,11 @@
           </a>
         </v-col>
         <v-col class="col-12 col-md-4 px-8 my-8 my-md-8">
-          <v-card shaped height="100%" class="text-center red darken-4 d-flex flex-column">
+          <v-card
+            shaped
+            height="100%"
+            class="text-center red darken-4 d-flex flex-column"
+          >
             <v-sheet color="white" class="py-3 contact-icon-box">
               <v-img
                 class="my-3"
@@ -57,7 +69,7 @@
             <v-sheet
               class="red darken-4 pa-5 white--text flex-grow-1 d-flex flex-column justify-center"
             >
-              <p>via Alessio Valerio 51</p>
+              <p>viale Madonna delle Grazie, 5</p>
               <p class="mb-0">35028 Piove di Sacco (PD)</p>
             </v-sheet>
           </v-card>
@@ -73,15 +85,16 @@
               id="messageForm"
               v-model="valid"
               method="post"
-              action="https://send.pageclip.co/{PRIVATE_KEY}/form-informazioni"
+              action="https://send.pageclip.co/{key}/form-informazioni"
               class="pageclip-form"
             >
               <v-sheet tile color="red darken-4" class="py-5 white--text">
                 <h3>
-                  <v-icon large dark class="mr-3">mdi-head-question</v-icon>Richiedi informazioni
+                  <v-icon large dark class="mr-3">mdi-head-question</v-icon
+                  >Richiedi informazioni
                 </h3>
               </v-sheet>
-              <v-sheet class="px-3">
+              <v-sheet class="px-5">
                 <v-text-field
                   v-model="nome"
                   name="name"
@@ -108,7 +121,12 @@
                   class="indigo--text text--darken-4"
                   color="indigo darken-4"
                 ></v-textarea>
-                <v-alert dismissible v-if="alert.type != null" :type="alert.type">{{alert.message}}</v-alert>
+                <v-alert
+                  dismissible
+                  v-if="alert.type != null"
+                  :type="alert.type"
+                  >{{ alert.message }}</v-alert
+                >
                 <v-btn
                   type="submit"
                   class="my-5 red darken-4 white--text"
@@ -127,19 +145,26 @@
 
         <v-col class="col-12 col-md-6 px-8 text-center">
           <v-card class="info-box d-flex flex-column" height="100%">
-            <v-sheet tile color="red darken-4" class="py-5 white--text tile-shape">
+            <v-sheet
+              tile
+              color="red darken-4"
+              class="py-5 white--text tile-shape"
+            >
               <h3>
-                <v-icon large dark class="mr-3">mdi-map-marker-question</v-icon>Come trovarci
+                <v-icon large dark class="mr-3">mdi-map-marker-question</v-icon
+                >Come trovarci
               </h3>
             </v-sheet>
             <v-sheet class="flex-grow-1 pa-2">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.3902849182855!2d12.035811314883745!3d45.30054117909931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ec1ab55266ae5%3A0x6f50a2ff902328de!2sVia%20Alessio%20Valerio%2C%2051%2C%2035028%20Piove%20di%20sacco%20PD%2C%20Italy!5e0!3m2!1sen!2ses!4v1582831860100!5m2!1sen!2ses"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.5282418340025!2d12.029144250216541!3d45.2977539524543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ec1addc5a23c7%3A0xe190954ac26e5b59!2sViale%20M.delle%20Grazie%2C%205%2C%2035028%20Piove%20di%20Sacco%20PD%2C%20Italy!5e0!3m2!1sen!2ses!4v1603030923636!5m2!1sen!2ses"
                 width="100%"
                 height="100%"
                 frameborder="0"
-                style="border:0;"
+                style="border: 0"
                 allowfullscreen
+                aria-hidden="false"
+                tabindex="0"
               ></iframe>
             </v-sheet>
           </v-card>
@@ -152,7 +177,7 @@
 <script>
 import Vue from "vue";
 import { VueReCaptcha } from "vue-recaptcha-v3";
-Vue.use(VueReCaptcha, { siteKey: "{PRIVATE_KEY}" }); //insert here Google captcha siteKey!
+Vue.use(VueReCaptcha, { siteKey: "{key}" }); // insert here Google captcha siteKey!
 
 export default {
   data() {

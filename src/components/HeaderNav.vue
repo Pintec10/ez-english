@@ -3,7 +3,7 @@
     <v-app-bar height="80px" class="py-0" app color="red darken-4" :extension-height="extensHeight">
       <v-sheet tile color="white" height="100%" class="d-flex align-center">
         <!---- burger button (mobile) ---->
-        <v-app-bar-nav-icon class="d-md-none" @click="drawer = true"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon class="mobile-display" @click="drawer = true"></v-app-bar-nav-icon>
         <!---- /burger button (mobile) ---->
 
         <v-toolbar-title>
@@ -20,7 +20,7 @@
       </v-sheet>
 
       <!----------- horizontal nav (desktop) ------------->
-      <div id="navbutton-cont" class="d-none d-md-block red darken-4 mb-0 flex-grow-1">
+      <div id="navbutton-cont" class="desktop-display red darken-4 mb-0 flex-grow-1">
         <v-btn
           text
           tile
@@ -80,7 +80,7 @@
           active-class="white red--text text--darken-4"
           class="white--text px-3"
           to="/about"
-        >Chi sono</v-btn>
+        >Chi siamo</v-btn>
         <v-btn
           text
           tile
@@ -101,14 +101,14 @@
       <v-spacer></v-spacer>
 
       <!----------- social buttons ------------->
-      <div class="ml-2">
+      <div class="pl-2">
         <a
           class="external-link mx-2"
           href="https://www.linkedin.com/in/emilio-zampieri-722181112/"
           target="_blank"
         >
-          <v-btn icon class="white">
-            <v-icon large color="indigo darken-4">mdi-linkedin</v-icon>
+          <v-btn width="40px" height="40px" icon class="white">
+            <v-icon medium color="indigo darken-4">mdi-linkedin</v-icon>
           </v-btn>
         </a>
         <a
@@ -116,8 +116,8 @@
           href="https://www.facebook.com/corsiinglesepiovedisacco/"
           target="_blank"
         >
-          <v-btn icon class="white">
-            <v-icon large color="indigo darken-4">mdi-facebook</v-icon>
+          <v-btn width="40px" height="40px" icon class="white">
+            <v-icon medium color="indigo darken-4">mdi-facebook</v-icon>
           </v-btn>
         </a>
       </div>
@@ -126,7 +126,7 @@
 
     <!----------- vertical nav (mobile) ------------->
     <v-navigation-drawer
-      class="d-md-none red darken-4"
+      class="mobile-display red darken-4"
       v-model="drawer"
       absolute
       height="100vh"
@@ -205,7 +205,7 @@
             <v-list-item-icon>
               <v-icon color="white">mdi-chat</v-icon>
             </v-list-item-icon>
-            <v-list-item-title class="white--text">Chi sono</v-list-item-title>
+            <v-list-item-title class="white--text">Chi siamo</v-list-item-title>
           </v-list-item>
 
           <v-list-item active-class="red darken-2 white--text" to="/perche-sceglierci">
@@ -270,7 +270,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 #logo {
   object-fit: contain;
   cursor: pointer;
@@ -290,7 +290,6 @@ export default {
 }
 
 .v-toolbar__extension {
-  /* background-color: #1a237e; */
   background-color: #b71c1c;
 }
 .v-btn:not(.v-btn--round).v-size--default {
@@ -311,5 +310,22 @@ header div.v-toolbar__content {
 
 #navbutton-cont .v-btn.v-size--default {
   font-size: 0.77rem !important;
+}
+
+.mobile-display {
+  display: block;
+}
+
+.desktop-display {
+  display: none;
+}
+
+@media only screen and (min-width: 1075px) {
+  .mobile-display {
+    display: none !important;
+  }
+  .desktop-display {
+    display: block;
+  }
 }
 </style>
